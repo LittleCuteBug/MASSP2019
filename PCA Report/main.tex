@@ -67,6 +67,7 @@ Với
     \item $X_i$ là basic function
     \item $z_i$ là toạ độ của điểm dữ liệu
 \end{enumerate}
+Dữ liệu qua thuật toán PCA trở thành các điểm toạ độ có thể sử dụng để so sánh hay lưu trữ...
 
 \section*{Encode}
 Khi áp dụng thuật toán ta có U là ma trận lưu basic functions, từ đó có thể tích toạ độ z của điểm dữ liệu bằng cách chiếu điểm dữ liệu lên các trục số
@@ -74,6 +75,7 @@ $z = U^T * x$ với $x = X - X_0$
 \section*{Decode}
 Với z là toạ độ của điểm dữ liệu, khi decode dữ liệu ta chỉ cần thay toạ độ của dữ liệu vào công thức (1)
 \section*{Thực nghiệm trên code}
+Áp dụng với bài toán encode và decode T ảnh
 Với mỗi K thuộc [1,10,20,50,100], ta có ảnh decode như sau: 
 
 \begin{figure}
