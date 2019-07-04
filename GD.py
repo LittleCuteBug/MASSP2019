@@ -39,7 +39,7 @@ plt.show()
 def grad(w):
     N = Xbar.shape[0]
     return 1/N * Xbar.T.dot(Xbar.dot(w) - y)
-
+# grad = 1/N * Xbar^T * (Xbar*w - y)
 def cost(w):
     N = Xbar.shape[0]
     return .5/N*np.linalg.norm(y - Xbar.dot(w), 2)**2;
@@ -61,7 +61,7 @@ def check_grad(w, cost, grad):
     grad1 = grad(w)
     grad2 = numerical_grad(w, cost)
     return True if np.linalg.norm(grad1 - grad2) < 1e-6 else False 
-#check to stop updating when dental(grad) < 1e-6
+#checking grad result by 2 way
 print( 'Checking gradient...', check_grad(np.random.rand(2, 1), cost, grad))
 def myGD(w_init, grad, eta):
     w = [w_init]
